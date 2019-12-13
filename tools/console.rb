@@ -20,6 +20,7 @@ albert = Follower.new("Albert", 38, "Play Freebird!")
 church_of_doggo.recruit_follower(joe, "2019-12-13")
 church_of_doggo.recruit_follower(stacy, "2019-11-21")
 
+
 binding.pry
 
 puts "Mwahahaha!" # just in case pry is buggy and exits

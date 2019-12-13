@@ -21,11 +21,29 @@ class Cult
 
     # INSTANCE METHODS #
 
-    def recruit_follower(follower, init_date)
+    def recruit_follower(follower, init_date)   # WORKS#
         BloodOath.new(self, follower, init_date)
         @followers << follower
         self.cult_population += 1
         return nil
+    end
+
+    def average_age     # WORKS #
+        ages = []
+        self.followers.each do |follower|
+            ages << follower.age
+        end
+        ages_total = ages.inject { |sum, n| sum + n }
+        average_age = (ages_total.to_f / ages.count.to_f)
+        average_age
+    end
+
+    def my_followers_motto      # WORKS #
+        mottos = []
+        self.followers.each do |follower|
+            mottos << follower.life_motto
+        end
+        mottos
     end
 
     # END INSTANCE METHODS #
@@ -52,6 +70,12 @@ class Cult
         @@all.select do |cult|
             cult.founding_year == founding_year
         end
+    end
+
+    def self.least_popular
+        
+        self.all.find do |cult|
+
     end
 
     # END CLASS METHODS #

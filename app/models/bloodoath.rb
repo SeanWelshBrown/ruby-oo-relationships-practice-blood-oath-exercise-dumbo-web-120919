@@ -6,7 +6,7 @@ class BloodOath
 
     # INITIALIZATION #
 
-    def initialize(cult, follower, init_date)
+    def initialize(cult, follower, init_date)   # WORKS #
         @cult = cult.name
         @follower = follower
         @init_date = init_date
@@ -17,7 +17,7 @@ class BloodOath
 
     # ACTIVE METHODS #
 
-    def initiation_date
+    def initiation_date # WORKS #
         @init_date
     end
 
@@ -25,7 +25,7 @@ class BloodOath
 
     # CLASS METHODS #
 
-    def self.all
+    def self.all    # WORKS #
         @@all
     end
 
